@@ -14,4 +14,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/socialNetworkDB', {
 
 mongoose.set('debug', true);
 
-app.listen(PORT, () => console.log(`🌍 Connected on localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Connected on localhost:${PORT}`));
+
+const routes = require('./routes');
+app.use('/api', routes);
